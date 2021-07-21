@@ -1,0 +1,13 @@
+nav{
+    .nav-brand{
+        @include textStyle($color-red,50px)
+    }
+    
+    .nav-link{
+        @include textStyle($color-dark,19px);
+        
+        &:hover{
+            color:$color-red!important;
+        }
+    }
+}

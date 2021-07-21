@@ -1,0 +1,15 @@
+include ../base/variables.pug
+
+header.fixed-top.bg-light
+   .container
+        .row
+            nav(class="navbar navbar-expand-lg col-md-12 col-lg-12 navbar-light")
+                h1(class='nav-brand fw-4' ) resuma
+                button(class="navbar-toggler  d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation")
+                    span(class="navbar-toggler-icon")
+                .collapse.navbar-collapse#collapsibleNavId 
+                    ul(class="navbar-nav mt-2 ml-auto mt-lg-0")
+                        each item in menuNav
+                            li(class="nav-item ml-lg-2 ml-xl-4") 
+                                a(class="nav-link fw-7" href="#")=item  
+                                                
