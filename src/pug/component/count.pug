@@ -1,0 +1,9 @@
+include ../base/variables.pug
+include ../base/mixins.pug
+
+section.count 
+    .container.my-4
+        .row 
+            each countItem in countList
+                .col-12.col-md-6.col-lg-3 
+                    +cardCustom(countItem.image,countItem.title, countItem.sub, countItem.alt, countItem.color)

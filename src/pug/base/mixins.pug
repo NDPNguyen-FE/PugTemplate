@@ -1,0 +1,6 @@
+mixin cardCustom(img, title, des, alt ,color ) 
+    .card.customCard
+        img(src=img class="card-img-top" alt=alt)
+        .card-body.text-center 
+            h3(class="card-title customCard__title" class=color)=title
+            p.card-text.customCard__sub=des

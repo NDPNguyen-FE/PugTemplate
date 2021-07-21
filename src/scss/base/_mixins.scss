@@ -1,13 +1,15 @@
 
-@mixin btn($bgColor, $bdColor) {
+@mixin btn($bgColor, $bdColor,$textTranform) {
     padding: 10px 30px;
-    border-radius: 15px;
+    border-radius: 30px;
     color: $color-white;
     background:$bgColor;
     border:1px solid $bdColor;
+    text-transform: $textTranform;
 
     &:hover{
-        box-shadow: 0 7px 16px rgb(0 0 0 / 12%);
+        cursor: pointer;
+        box-shadow: 0 7px 16px $color-shadow;
     }
 }
 
@@ -17,23 +19,26 @@
 }
 
 
-@mixin cardCustom($titleSize,$colorTitle, $subSize, $subColor){
-    position: relative;
+@mixin cardCustom($titleSize,$colorTitle,$fwTitle, $subSize, $subColor,$fwSub){
     display: flex;
     flex-direction: column;
     align-items:center;
-
+    border: none;
+    
     img{
-        width:100%; 
-        object-fit: cover;       
+        height:80px;
+        width:80px;        
     }
     &__title{
+        
         color: $colorTitle;
         font-size:$titleSize;
+        font-weight: $fwTitle;
     }
     &__sub{
         color: $subColor;
         font-size:$subSize;
+        font-weight: $fwSub;
     }
 }
 

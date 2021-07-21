@@ -1237,15 +1237,12 @@ nav .nav-link {
 
 .banner {
   background-image: url("/assets/img/bg_banner.png");
-  position: relative;
   height: 100vh; }
   .banner__container {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%); }
+    height: 100vh;
+    display: flex;
+    align-items: center; }
   .banner h2 {
     color: #000000;
     font-size: 50px; }
@@ -1253,6 +1250,10 @@ nav .nav-link {
     color: #707070;
     font-size: 20px; }
   .banner__sub {
+    padding: 25px 50px;
+    box-shadow: 0px 7px 16px #0000002a;
+    background-color: #fff;
+    border-radius: 25px;
     color: #707070;
     font-size: 18px; }
   .banner .social__link {
@@ -1262,3 +1263,74 @@ nav .nav-link {
       color: #FF2E59;
       cursor: pointer;
       box-shadow: 1px 3px 4px #0000002a; }
+  .banner .banner__btn {
+    margin-top: 50px; }
+    .banner .banner__btn .btn--link {
+      padding: 10px 30px;
+      border-radius: 30px;
+      color: #ffffff;
+      background: #FF2E59;
+      border: 1px solid #FF2E59;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-size: 20px; }
+      .banner .banner__btn .btn--link:hover {
+        cursor: pointer;
+        box-shadow: 0 7px 16px #0000002a; }
+
+.count {
+  padding-top: 40px; }
+  .count .customCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none; }
+    .count .customCard img {
+      height: 80px;
+      width: 80px; }
+    .count .customCard__title {
+      color: none;
+      font-size: 48px;
+      font-weight: 400; }
+    .count .customCard__sub {
+      color: #707070;
+      font-size: 16px;
+      font-weight: 700; }
+    .count .customCard .text--purple {
+      color: #943FE4; }
+    .count .customCard .text--orange {
+      color: #FB6B45; }
+    .count .customCard .text--red {
+      color: #FF2E59; }
+    .count .customCard .text--yellow {
+      color: #FBBD41; }
+
+.skills__cap {
+  margin: 40px 0; }
+
+.skills .customCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none; }
+  .skills .customCard img {
+    height: 80px;
+    width: 80px; }
+  .skills .customCard__title {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700; }
+  .skills .customCard__sub {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 400; }
+  .skills .customCard__title {
+    font-family: 'Quicksand', sans-serif; }
+  .skills .customCard__title:hover {
+    color: #FF2E59; }
+  .skills .customCard:hover {
+    cursor: pointer; }
+
+.skills__sub {
+  color: #FB6B45;
+  font-size: 18px; }

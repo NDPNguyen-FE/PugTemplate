@@ -1,0 +1,11 @@
+include ../base/variables.pug
+include ../base/mixins.pug
+
+section.skills 
+    .container.text-center
+        h1.skills__cap Skills and Expertise
+        .row  
+            each skillItem in skillList
+                .col-12.col-sm-6.col-md-4 
+                    +cardCustom(skillItem.image, skillItem.title, skillItem.sub, skillItem.alt ) 
+        p.skills__sub.fw-7 Have a project in mind?

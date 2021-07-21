@@ -1,0 +1,29 @@
+.skills{
+
+    &__cap{
+        margin: 40px 0;
+    }
+
+    .customCard{
+
+        @include cardCustom(20px, $color-dark, 700, 14px , $color-gray, 400);
+
+        &__title {
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        &__title:hover {
+            color: $color-red;
+        }
+
+        &:hover{
+            cursor: pointer;   
+        }
+        
+    }
+
+    &__sub{
+        @include textStyle($color-orange,18px)
+    }
+    
+}
