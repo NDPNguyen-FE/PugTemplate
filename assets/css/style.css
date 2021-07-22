@@ -1223,7 +1223,8 @@ ul {
   position: absolute !important; }
 
 section {
-  position: relative !important; }
+  position: relative !important;
+  padding-bottom: 50px; }
 
 nav .nav-brand {
   color: #FF2E59;
@@ -1237,25 +1238,43 @@ nav .nav-link {
 
 .banner {
   background-image: url("/assets/img/bg_banner.png");
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0; }
+  .banner img {
+    width: 178px;
+    height: auto; }
   .banner__container {
-    width: 100%;
-    height: 100vh;
     display: flex;
-    align-items: center; }
+    align-items: flex-end;
+    justify-content: center; }
   .banner h2 {
     color: #000000;
     font-size: 50px; }
+    @media (max-width: 575px) {
+      .banner h2 {
+        color: #000000;
+        font-size: 30px; } }
   .banner__title {
     color: #707070;
     font-size: 20px; }
+    @media (max-width: 575px) {
+      .banner__title {
+        color: #707070;
+        font-size: 15px; } }
   .banner__sub {
-    padding: 25px 50px;
+    padding: 25px 20px;
     box-shadow: 0px 7px 16px #0000002a;
     background-color: #fff;
     border-radius: 25px;
     color: #707070;
     font-size: 18px; }
+    @media (max-width: 575px) {
+      .banner__sub {
+        color: #707070;
+        font-size: 16px; } }
   .banner .social__link {
     padding: 15px;
     border-radius: 5px; }
@@ -1263,9 +1282,9 @@ nav .nav-link {
       color: #FF2E59;
       cursor: pointer;
       box-shadow: 1px 3px 4px #0000002a; }
-  .banner .banner__btn {
+  .banner .btn {
     margin-top: 50px; }
-    .banner .banner__btn .btn--link {
+    .banner .btn .btn--link {
       padding: 10px 30px;
       border-radius: 30px;
       color: #ffffff;
@@ -1274,15 +1293,16 @@ nav .nav-link {
       text-transform: uppercase;
       color: #ffffff;
       font-size: 20px; }
-      .banner .banner__btn .btn--link:hover {
+      .banner .btn .btn--link:hover {
         cursor: pointer;
         box-shadow: 0 7px 16px #0000002a; }
 
 .count {
   padding-top: 40px; }
   .count .customCard {
-    display: flex;
     flex-direction: column;
+    display: flex;
+    justify-content: center;
     align-items: center;
     border: none; }
     .count .customCard img {
@@ -1292,10 +1312,14 @@ nav .nav-link {
       color: none;
       font-size: 48px;
       font-weight: 400; }
-    .count .customCard__sub {
+    .count .customCard__des {
       color: #707070;
       font-size: 16px;
       font-weight: 700; }
+    .count .customCard__sub {
+      color: none;
+      font-size: none;
+      font-weight: none; }
     .count .customCard .text--purple {
       color: #943FE4; }
     .count .customCard .text--orange {
@@ -1309,8 +1333,9 @@ nav .nav-link {
   margin: 40px 0; }
 
 .skills .customCard {
-  display: flex;
   flex-direction: column;
+  display: flex;
+  justify-content: center;
   align-items: center;
   border: none; }
   .skills .customCard img {
@@ -1320,10 +1345,14 @@ nav .nav-link {
     color: #000000;
     font-size: 20px;
     font-weight: 700; }
-  .skills .customCard__sub {
+  .skills .customCard__des {
     color: #707070;
     font-size: 14px;
     font-weight: 400; }
+  .skills .customCard__sub {
+    color: none;
+    font-size: none;
+    font-weight: none; }
   .skills .customCard__title {
     font-family: 'Quicksand', sans-serif; }
   .skills .customCard__title:hover {
@@ -1334,3 +1363,47 @@ nav .nav-link {
 .skills__sub {
   color: #FB6B45;
   font-size: 18px; }
+
+.skills .btn {
+  margin-top: 20px; }
+  .skills .btn .btn--link {
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    background: #FF2E59;
+    border: 1px solid #FF2E59;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20px; }
+    .skills .btn .btn--link:hover {
+      cursor: pointer;
+      box-shadow: 0 7px 16px #0000002a; }
+
+.experience .customCard {
+  flex-direction: row;
+  gap: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none; }
+  .experience .customCard img {
+    height: 80px;
+    width: 80px; }
+  .experience .customCard__title {
+    color: #FF2E59;
+    font-size: 20px;
+    font-weight: 700; }
+  .experience .customCard__des {
+    color: #943FE4;
+    font-size: 16px;
+    font-weight: 700; }
+  .experience .customCard__sub {
+    color: #707070;
+    font-size: 14px;
+    font-weight: 400; }
+  .experience .customCard__title {
+    font-family: 'Quicksand', sans-serif; }
+
+.feature .tab-pane img {
+  width: 100%;
+  height: 100%; }

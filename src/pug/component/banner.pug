@@ -1,14 +1,11 @@
-include ../base/variables.pug
-
-
 section.banner 
     .container.banner__container
-        .row 
+        .row
             .col-lg-12.col-12.text-center
                 img(src="assets/img/profile.png" alt="projectimage")
-                h2.py-4 Gregory Andrews
+                h2 Gregory Andrews
                 p.banner__title.fw-7 Web Designer & Developer
-                .container.social__container.my-9.w-50.mx-auto
+                .container.social__container.mb-4.w-50.mx-auto
                     .row.justify-content-center
                         .social__list.d-flex
                             each itemBanner in iconBanner 
@@ -16,8 +13,7 @@ section.banner
                                     a(class="social__link" href="#")
                                         i(class=itemBanner) 
                 p.banner__sub.w-75.mx-auto  I'm Greg, a fictional character here to showcase the Resuma template by Codefest™. Take a look around this landing page template and buy it if you like it as much as I do.
-                .banner__btn 
-                    a(class="btn--link fw-7") download resume
+                +btnLink("download resume")
                         
 
                     

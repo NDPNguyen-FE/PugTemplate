@@ -1,0 +1,11 @@
+.experience{
+    .customCard{
+        flex-direction: row;
+        gap:3px;
+        @include cardCustom(20px, $color-red, 700, 16px, $color-purple, 700, 14px, $color-gray, 400);
+
+        &__title {
+            font-family: 'Quicksand', sans-serif;
+        }
+    }
+}

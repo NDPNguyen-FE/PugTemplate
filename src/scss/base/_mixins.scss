@@ -13,15 +13,26 @@
     }
 }
 
+@mixin btnLink($marginTop, $bgColor, $bdColor, $textTranform, $colorText, $fsText){
+    .btn {
+        margin-top:$marginTop;
+        .btn--link{
+            @include btn($bgColor,$bdColor,$textTranform);
+            @include textStyle($colorText,$fsText);
+        }
+    }
+}
+
+
 @mixin textStyle($colorText, $fontSize){
     color: $colorText;
     font-size:$fontSize;
 }
 
 
-@mixin cardCustom($titleSize,$colorTitle,$fwTitle, $subSize, $subColor,$fwSub){
+@mixin cardCustom($titleSize,$colorTitle,$fwTitle,$desSize,$desColor,$fwDes, $subSize, $subColor,$fwSub){
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items:center;
     border: none;
     
@@ -29,16 +40,28 @@
         height:80px;
         width:80px;        
     }
+
     &__title{
         
         color: $colorTitle;
         font-size:$titleSize;
         font-weight: $fwTitle;
     }
+
+    &__des{
+        color: $desColor;
+        font-size:$desSize;
+        font-weight: $fwDes;
+    }
+
     &__sub{
         color: $subColor;
         font-size:$subSize;
         font-weight: $fwSub;
     }
+
 }
+
+
+
 

@@ -1,6 +1,16 @@
-mixin cardCustom(img, title, des, alt ,color ) 
+mixin cardCustom(img, title, des, alt ,color, sub ) 
     .card.customCard
         img(src=img class="card-img-top" alt=alt)
-        .card-body.text-center 
+        .card-body
             h3(class="card-title customCard__title" class=color)=title
-            p.card-text.customCard__sub=des
+            p.card-text.customCard__des=des
+            p.customCard__sub=sub
+
+
+mixin btnLink(text)
+    .btn 
+        a(href="/").btn--link.fw-7=text
+
+mixin tabPanel(img,alt)
+    div(class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab")
+        img(src=img, alt=alt, class="col-md-4 col-12 my-2")

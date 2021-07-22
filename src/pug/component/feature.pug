@@ -1,0 +1,19 @@
+section.feature 
+    .container 
+        .row.text-center
+            h2.w-100 Featured Work
+            ul.nav.nav-pills#pills-tab(role="tablist")
+                each itemMenu in menuList
+                    li.nav-item(role="presentation")
+                        if itemMenu.isActive
+                            a(class="nav-link active" id=itemMenu.id data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true")=itemMenu.name
+                        else 
+                            a(class="nav-link" id=itemMenu.id data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false")=itemMenu.name
+            .tab-content#pills-tabContent
+                .row
+                    each itemMenu in menuList
+                        if itemMenu.isActive
+                            each itemAll in allList
+                                div(class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" class="col-md-4 col-12 my-2") 
+                                    img(src=itemAll.image, alt=itemAll.alt)
+                    

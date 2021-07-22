@@ -5,8 +5,8 @@
     }
 
     .customCard{
-
-        @include cardCustom(20px, $color-dark, 700, 14px , $color-gray, 400);
+        flex-direction: column;
+        @include cardCustom(20px, $color-dark, 700, 14px , $color-gray, 400, none, none, none);
 
         &__title {
             font-family: 'Quicksand', sans-serif;
@@ -25,5 +25,8 @@
     &__sub{
         @include textStyle($color-orange,18px)
     }
+
+    @include btnLink(20px, $color-red,$color-red, uppercase, $color-white, 20px)
+
     
 }
