@@ -4,6 +4,6 @@ section.skills
         .row  
             each skillItem in skillList
                 .col-12.col-sm-6.col-md-4 
-                    +cardCustom(skillItem.image, skillItem.title, skillItem.des, skillItem.alt ) 
+                    +cardCustom(skillItem.image, none, none , skillItem.title, skillItem.des, skillItem.alt ) 
         p.skills__sub.fw-7 Have a project in mind?
         +btnLink("contact me")

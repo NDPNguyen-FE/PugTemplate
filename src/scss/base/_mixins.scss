@@ -13,9 +13,9 @@
     }
 }
 
-@mixin btnLink($marginTop, $bgColor, $bdColor, $textTranform, $colorText, $fsText){
+@mixin btnLink($margin, $bgColor, $bdColor, $textTranform, $colorText, $fsText){
     .btn {
-        margin-top:$marginTop;
+        margin:$margin;
         .btn--link{
             @include btn($bgColor,$bdColor,$textTranform);
             @include textStyle($colorText,$fsText);
@@ -26,20 +26,16 @@
 
 @mixin textStyle($colorText, $fontSize){
     color: $colorText;
-    font-size:$fontSize;
+    font-size:$fontSize;   
 }
 
 
 @mixin cardCustom($titleSize,$colorTitle,$fwTitle,$desSize,$desColor,$fwDes, $subSize, $subColor,$fwSub){
+    position: relative;
     display: flex;
     justify-content: center;
     align-items:center;
     border: none;
-    
-    img{
-        height:80px;
-        width:80px;        
-    }
 
     &__title{
         
@@ -61,6 +57,28 @@
     }
 
 }
+
+@mixin cardImg {
+    img{
+        height:80px;
+        width:80px;        
+    }
+}
+
+@mixin colorCard($color,$bdColor){
+    .cardText__head{
+        background-color:$color;
+    }
+
+    .cardText__title{
+        @include textStyle($color,30px);
+    }
+    
+    @include btnLink(15px, $color, $bdColor, none, $color-white, 18px);
+}
+
+
+
 
 
 

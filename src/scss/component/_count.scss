@@ -5,7 +5,7 @@
     .customCard {
         flex-direction: column;
         @include cardCustom(48px, none , 400, 16px, $color-gray, 700, none, none, none)
-
+        @include cardImg;
         .text--purple{
             color:$color-purple;
         }

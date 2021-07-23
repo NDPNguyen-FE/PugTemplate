@@ -7,7 +7,7 @@
     .customCard{
         flex-direction: column;
         @include cardCustom(20px, $color-dark, 700, 14px , $color-gray, 400, none, none, none);
-
+        @include cardImg;
         &__title {
             font-family: 'Quicksand', sans-serif;
         }

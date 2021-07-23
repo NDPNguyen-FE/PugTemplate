@@ -1,19 +1,36 @@
 section.feature 
     .container 
-        .row.text-center
+        .row.text-center.justify-content-center
             h2.w-100 Featured Work
             ul.nav.nav-pills#pills-tab(role="tablist")
                 each itemMenu in menuList
                     li.nav-item(role="presentation")
                         if itemMenu.isActive
-                            a(class="nav-link active" id=itemMenu.id data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true")=itemMenu.name
+                            a(class="nav-link active" id=itemMenu.id data-toggle="pill" href=itemMenu.href role="tab" aria-controls="pills-home" aria-selected="true")=itemMenu.name
                         else 
-                            a(class="nav-link" id=itemMenu.id data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false")=itemMenu.name
+                            a(class="nav-link" id=itemMenu.id data-toggle="pill" href=itemMenu.href role="tab" aria-controls="pills-profile" aria-selected="false")=itemMenu.name
             .tab-content#pills-tabContent
-                .row
-                    each itemMenu in menuList
-                        if itemMenu.isActive
-                            each itemAll in allList
-                                div(class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" class="col-md-4 col-12 my-2") 
-                                    img(src=itemAll.image, alt=itemAll.alt)
+                each itemMenu in menuList
+                    if itemMenu.isActive
+                        div( class="tab-pane fade show active" id=itemMenu.ariaCtrl role="tabpanel" aria-labelledby=itemMenu.id)   
+                            each itemAll in allList 
+                                img(src=itemAll.image, alt=itemAll.alt, class="col-md-4 col-12 my-4")
+                    else 
+                        div(class="tab-pane fade" id=itemMenu.ariaCtrl role="tabpanel" aria-labelledby=itemMenu.id)
+                            case itemMenu.ariaCtrl
+                                when "pills-web"
+                                    each itemWeb in webList  
+                                        img(src=itemWeb.image, alt=itemWeb.alt, class="col-md-4 col-12 my-4")
+                                when "pills-print"
+                                    each itemPrint in printList  
+                                        img(src=itemPrint.image, alt=itemPrint.alt, class="col-md-4 col-12 my-4")
+                                when "pills-code"
+                                    each itemCode in codeList  
+                                        img(src=itemCode.image, alt=itemCode.alt, class="col-md-4 col-12 my-4")
+                                when "pills-art"
+                                    each itemArt in artList  
+                                        img(src=itemArt.image, alt=itemArt.alt, class="col-md-4 col-12 my-4")
+            +btnLink("view my rates")                  
+            
+                           
                     
