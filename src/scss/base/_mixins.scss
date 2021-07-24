@@ -19,6 +19,10 @@
         .btn--link{
             @include btn($bgColor,$bdColor,$textTranform);
             @include textStyle($colorText,$fsText);
+           
+        }
+        &:hover{
+            animation:pulse 0.5s ease-in-out;
         }
     }
 }

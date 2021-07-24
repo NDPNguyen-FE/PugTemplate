@@ -1,0 +1,26 @@
+section.contact
+    .container
+        .row.justify-content-center
+        h2.w-100.text-center Get in Contact
+        form(action="#" class="col-md-8 offset-md-2 col-12 text-center mt-7")
+            h4.form__head Looking to start a project?
+            p.form__sub Use the form below or send me an email
+            .form-row
+                .form-group.col-12.col-md-6
+                    +inputForm("text", "nameInput", "Full name")
+                .form-group.col-12.col-md-6
+                    +inputForm("email", "emailInput", "Email address")
+            .form-row
+                .form-group.col-12 
+                    +inputForm("text", "subjectInput", "Subject")
+            .form-row
+                .form-group.col-12
+                    textarea(class="form-control" id="textarea" placeholder="Message" rows="9")
+            +btnLink("submit message") 
+        a(href="#" class="back--top")
+            i(class="fal fa-arrow-alt-up") 
+
+
+
+
+            

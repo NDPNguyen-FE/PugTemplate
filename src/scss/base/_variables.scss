@@ -19,4 +19,54 @@ $breakpoints:(
     'lg':(max-width:1199px)
 )   ;
 
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  
+
+}
+
+@keyframes backInLeft {
+    0% {
+      transform: translateX(-2000px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    80% {
+      transform: translateX(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+@keyframes bounceOutUp {
+    20% {
+      transform: translate3d(0, -10px, 0) scaleY(0.985);
+    }
+  
+    40%,
+    45% {
+      opacity: 1;
+      transform: translate3d(0, 20px, 0) scaleY(0.9);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, -2000px, 0) scaleY(3);
+    }
+  }
+  
 

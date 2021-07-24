@@ -1,0 +1,20 @@
+.contact{
+    position: relative;
+    @include btnLink(10px, $color-red, $color-red, uppercase, $color-white, 700);
+    
+    .back--top{
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+        i{
+            color: $color-white;
+            padding: 20px;
+            background:$color-gray;
+            border-radius: 50%;
+        }
+        &:hover{
+            animation:bounceOutUp 1s ease-in-out;
+        }
+       
+    }
+}

@@ -1,7 +1,7 @@
 section.price 
     .container
-        .row.text-center 
+        .row.text-center.justify-content-center 
             h2.w-100 Pricing and Rates
             each priceItem in priceCard
-                .col-md-4.col-12.my-4 
+                .col-lg-4.col-md-6.col-12.my-4 
                     +cardText(priceItem.price, priceItem.dram, priceItem.title, priceItem.des, priceItem.sub,priceItem.color)      

@@ -1,4 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1); }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05); }
+  to {
+    transform: scale3d(1, 1, 1); } }
+
+@keyframes backInLeft {
+  0% {
+    transform: translateX(-2000px) scale(0.7);
+    opacity: 0.7; }
+  80% {
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0) scaleY(0.985); }
+  40%,
+  45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0) scaleY(0.9); }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0) scaleY(3); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -1238,6 +1268,8 @@ nav .nav-link {
 
 .banner {
   background-image: url("/assets/img/bg_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -1247,6 +1279,7 @@ nav .nav-link {
     width: 178px;
     height: auto; }
   .banner__container {
+    animation: backInLeft 2s ease-in-out;
     display: flex;
     align-items: flex-end;
     justify-content: center; }
@@ -1283,7 +1316,7 @@ nav .nav-link {
       cursor: pointer;
       box-shadow: 1px 3px 4px #0000002a; }
   .banner .btn {
-    margin: 50px; }
+    margin: 20px; }
     .banner .btn .btn--link {
       padding: 10px 30px;
       border-radius: 30px;
@@ -1296,6 +1329,8 @@ nav .nav-link {
       .banner .btn .btn--link:hover {
         cursor: pointer;
         box-shadow: 0 7px 16px #0000002a; }
+    .banner .btn:hover {
+      animation: pulse 0.5s ease-in-out; }
 
 .count {
   padding-top: 40px; }
@@ -1380,6 +1415,8 @@ nav .nav-link {
     .skills .btn .btn--link:hover {
       cursor: pointer;
       box-shadow: 0 7px 16px #0000002a; }
+  .skills .btn:hover {
+    animation: pulse 0.5s ease-in-out; }
 
 .experience .customCard {
   flex-direction: row;
@@ -1421,7 +1458,11 @@ nav .nav-link {
 
 .feature .tab-pane img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out; }
+  .feature .tab-pane img:hover {
+    transform: scale(1.1); }
 
 .feature .btn {
   margin: 30px; }
@@ -1437,6 +1478,8 @@ nav .nav-link {
     .feature .btn .btn--link:hover {
       cursor: pointer;
       box-shadow: 0 7px 16px #0000002a; }
+  .feature .btn:hover {
+    animation: pulse 0.5s ease-in-out; }
 
 .price .cardText {
   border-radius: 20px;
@@ -1493,6 +1536,8 @@ nav .nav-link {
     .price .orange .btn .btn--link:hover {
       cursor: pointer;
       box-shadow: 0 7px 16px #0000002a; }
+  .price .orange .btn:hover {
+    animation: pulse 0.5s ease-in-out; }
 
 .price .red .cardText__head {
   background-color: #FF2E59; }
@@ -1515,6 +1560,8 @@ nav .nav-link {
     .price .red .btn .btn--link:hover {
       cursor: pointer;
       box-shadow: 0 7px 16px #0000002a; }
+  .price .red .btn:hover {
+    animation: pulse 0.5s ease-in-out; }
 
 .price .purple .cardText__head {
   background-color: #943FE4; }
@@ -1537,3 +1584,38 @@ nav .nav-link {
     .price .purple .btn .btn--link:hover {
       cursor: pointer;
       box-shadow: 0 7px 16px #0000002a; }
+  .price .purple .btn:hover {
+    animation: pulse 0.5s ease-in-out; }
+
+.contact {
+  position: relative; }
+  .contact .btn {
+    margin: 10px; }
+    .contact .btn .btn--link {
+      padding: 10px 30px;
+      border-radius: 30px;
+      color: #ffffff;
+      background: #FF2E59;
+      border: 1px solid #FF2E59;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-size: 700; }
+      .contact .btn .btn--link:hover {
+        cursor: pointer;
+        box-shadow: 0 7px 16px #0000002a; }
+    .contact .btn:hover {
+      animation: pulse 0.5s ease-in-out; }
+  .contact .back--top {
+    position: absolute;
+    bottom: 20px;
+    right: 10px; }
+    .contact .back--top i {
+      color: #ffffff;
+      padding: 20px;
+      background: #707070;
+      border-radius: 50%; }
+    .contact .back--top:hover {
+      animation: bounceOutUp 1s ease-in-out; }
+
+.footer p {
+  color: #707070; }
